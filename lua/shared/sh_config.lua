@@ -14,7 +14,7 @@ SimpleBanking.Config["business_ranks"] = { -- what ranks can see the society acc
 
 SimpleBanking.Config["business_ranks_overrides"] = {
     ['police'] = {
-        ['hoofdcommissaris'] = true,
+        ['boss'] = true,
     },
     ['burgershot'] = {
         ['boss'] = true,
