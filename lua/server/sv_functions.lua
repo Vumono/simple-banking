@@ -4,7 +4,7 @@ function AddTransaction(source, sAccount, iAmount, sType, sReceiver, sMessage, c
 
     local iTransactionID = math.random(1000, 100000)
 
-    MySQL.insert("INSERT INTO `transactions` (`identifier`, `trans_id`, `account`, `amount`, `trans_type`, `receiver`, `comment`) VALUES(@identifier, @trans_id, @account, @amount, @trans_type, @receiver @comment)", {
+    MySQL.insert("INSERT INTO `transactions` (`identifier`, `trans_id`, `account`, `amount`, `trans_type`, `receiver`, `comment`) VALUES(@identifier, @trans_id, @account, @amount, @trans_type, @receiver, @comment)", {
         ['@identifier'] = xPlayer.getIdentifier(),
         ['@trans_id'] = iTransactionID,
         ['@account'] = sAccount,
