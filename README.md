@@ -1,6 +1,6 @@
-# simple-banking used with ES_extended
-# Converted from QBCore
-# All credits for this go to https://github.com/Pawsative and https://github.com/ImpulseFPS
+# Simple-banking used with ES_extended
+## Converted from QBCore
+## All credits for this go to https://github.com/Pawsative and https://github.com/ImpulseFPS
 
 ###### This is by no means a leak, I talked to the original developer of simple banking and we talked about me releasing this for everyone since he is re-coding the banking and he give me his permission to release it. So huge thanks to him.
 
