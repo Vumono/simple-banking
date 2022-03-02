@@ -2,6 +2,7 @@ fx_version 'cerulean'
 games { 'gta5' }
 
 shared_scripts {
+    '@es_extended/imports.lua',
     'lua/shared/sh_*.lua',
 }
 
