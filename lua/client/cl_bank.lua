@@ -91,19 +91,21 @@ AddEventHandler('gb-banking:atm:openUI', function() -- this opens ATM
 	end
 end)
 local ATMS = {
-   `prop_atm_01`,
-   `prop_atm_02`,
-   `prop_atm_03`,
-   `prop_fleeca_atm`,
+    -1364697528, --red
+   -1126237515, --blue
+   -870868698, --blue
+   506770882, --green
+   150237004, --green
+   -239124254, --green
 }
 
 
-exports.qtarget:AddTargetModel({ATMS}, {
+exports['qtarget']:AddTargetModel(ATMS, {
     options = {
             {
                 event = "gb-banking:atm:openUI",
-				icon = "fas fa-money-check",
-				label = "Access ATM",
+                icon = "fas fa-money-check",
+                label = "Access ATM",
             },
         },
         distance = 2.5
