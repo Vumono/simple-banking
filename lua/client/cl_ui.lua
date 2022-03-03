@@ -41,7 +41,6 @@ function ToggleUI()
     else
         ESX.TriggerServerCallback("gb-banking:GetBankData", function(data, transactions)
             local PlayerBanks = json.encode(data)
-            print(json.encode(transactions))
 
 
             SetNuiFocus(true, true)
@@ -138,7 +137,6 @@ AddEventHandler("gb-banking:UpdateTransactions", function(transactions)
 
         ESX.TriggerServerCallback("gb-banking:GetBankData", function(data, transactions)
             local PlayerBanks = json.encode(data)
-            print(PlayerBanks)
             SendNUIMessage({type = "refresh_balances", accounts = PlayerBanks })
         end)
     end
