@@ -53,3 +53,7 @@ ESX.RegisterServerCallback("gb-banking:GetBankData", function(source, cb)
     cb(tbl, TransactionHistory)
 end)
 
+ESX.RegisterServerCallback('gb-banking:namecheck', function(source, cb)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    cb(xPlayer.name)
+end)
