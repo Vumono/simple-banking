@@ -26,7 +26,8 @@ end)
 
 
 function ToggleUI()
-    local charinfo = ESX.PlayerData.name
+    ESX.TriggerServerCallback('gb-banking:namecheck', function(name)  
+
     bMenuOpen = not bMenuOpen
 
     if (not bMenuOpen) then
@@ -38,9 +39,10 @@ function ToggleUI()
 
 
             SetNuiFocus(true, true)
-            SendNUIMessage({type = 'OpenUI', accounts = PlayerBanks, transactions = json.encode(transactions), name = charinfo})
+            SendNUIMessage({type = 'OpenUI', accounts = PlayerBanks, transactions = json.encode(transactions), name = name})
         end)
     end
+    end)
 end
 
 RegisterNUICallback("CloseATM", function()
