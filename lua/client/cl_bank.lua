@@ -88,6 +88,7 @@ AddEventHandler('gb-banking:atm:openUI', function() -- this opens ATM
 				ToggleUI()
 			end
 		end)
+	 TriggerEvent("gb-banking:atmVar")
 	end
 end)
 local ATMS = {
