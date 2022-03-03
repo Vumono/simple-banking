@@ -1,5 +1,4 @@
 
---TriggerServerEvent('gb-banking:DepositMoney', data.account, data.amount, (data.comment ~= nil and data.comment or "")
 RegisterNetEvent('gb-banking:DepositMoney')
 AddEventHandler('gb-banking:DepositMoney', function(account, amount, comment)
     local src = source
@@ -10,13 +9,13 @@ AddEventHandler('gb-banking:DepositMoney', function(account, amount, comment)
     end
 
     if not amount or tonumber(amount) <= 0 then
-        TriggerClientEvent("gb-banking:Notify", src, "error", "Invalid Amount!") 
+        TriggerClientEvent("gb-banking:Notify", source, "error", "Invalid Amount!") 
         return
     end
 
     local amount = tonumber(amount)
     if amount > xPlayer.getMoney() then
-        TriggerClientEvent("gb-banking:Notify", src, "error", "You can't afford this!") 
+        TriggerClientEvent("gb-banking:Notify", source, "error", "You can't afford this!") 
         return
     end
 
