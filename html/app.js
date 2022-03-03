@@ -61,7 +61,7 @@ function AddAccount(account_name, account_type, bal, ply_Name)
         <div class='card bgdark2'>\
             <div class='account'>\
                 <h5 class='card-title comment'>" + account_name + (relang[account_type] === "personal" && " </i>" || "") + "</h5>\
-                <p class='card-subtitle comment'>" + relang[account_type] + "</p>\
+               <p class='card-subtitle comment'>" + account_type + "</p>\
 \
                 <div class='row'>\
                     <div class='col'>\
@@ -194,7 +194,7 @@ function OpenATM(data, transactions, name)
         for (var i = 0; i < tbl.length; i++)
         {
             let tTbl = tbl[i];
-            AddAccount((tTbl.type === "business" && tTbl.name || "Personal Account"), (tTbl.type), tTbl.amount, name);
+             AddAccount((tTbl.type === "business" && tTbl.name || "Personal Account"), (lang[tTbl.type] && lang[tTbl.type] || tTbl.type), tTbl.amount, name);
         }
     }
 
