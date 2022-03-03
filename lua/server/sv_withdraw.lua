@@ -10,7 +10,7 @@ AddEventHandler("gb-banking:Withdraw", function(account, amount, comment)
     end
 
     if not amount or tonumber(amount) <= 0 then
-        TriggerClientEvent("gb-banking:Notify", src, "error", "Invalid amount!") 
+        TriggerClientEvent("gb-banking:Notify", source, "error", "Invalid amount!") 
         return
     end
 
@@ -18,7 +18,7 @@ AddEventHandler("gb-banking:Withdraw", function(account, amount, comment)
 
     if account == "personal" then
         if amount > xPlayer.getAccount('bank').money then
-            TriggerClientEvent("gb-banking:Notify", src, "error", "Your bank doesn't have this much money!") 
+            TriggerClientEvent("gb-banking:Notify", source, "error", "Your bank doesn't have this much money!") 
             return
         end
         local withdraw = math.floor(amount)
