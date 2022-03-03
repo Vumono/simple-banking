@@ -65,7 +65,7 @@ RegisterNUICallback("DepositCash", function(data, cb)
     end
 
     if aATM then
-      TriggerEvent("gb-banking:Notify", "error", "You cannot deposit at a ATM!")
+      TriggerEvent("gb-banking:Notify", "error", "You cannot deposit at an ATM!")
     else
       TriggerServerEvent('gb-banking:DepositMoney', data.account, data.amount, (data.comment ~= nil and data.comment or ""))
       aATM = false
@@ -83,7 +83,7 @@ RegisterNUICallback("WithdrawCash", function(data, cb)
     wamt = tonumber(data.amount)
     if aATM then
      if wamt >= 10000 then
-      TriggerEvent("gb-banking:Notify", "error", "You cannot withdraw more then 10000 at a ATM!")
+      TriggerEvent("gb-banking:Notify", "error", "You cannot withdraw more then 10000 at an ATM!")
      else
       TriggerServerEvent("gb-banking:Withdraw", data.account, data.amount, (data.comment ~= nil and data.comment or ""))
       aATM = false
@@ -109,7 +109,7 @@ RegisterNUICallback("TransferCash", function(data, cb)
     tamt = tonumber(data.amount)
     if aATM then
      if tamt >= 10000 then
-      TriggerEvent("gb-banking:Notify", "error", "You cannot transfer more then 10000 at a ATM!")
+      TriggerEvent("gb-banking:Notify", "error", "You cannot transfer more then 10000 at an ATM!")
      else
       TriggerServerEvent("gb-banking:Transfer", data.target, data.account, data.amount, (data.comment ~= nil and data.comment or ""))
       aATM = false
