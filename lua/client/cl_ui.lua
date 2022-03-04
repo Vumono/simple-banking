@@ -85,11 +85,9 @@ RegisterNUICallback("WithdrawCash", function(data, cb)
       TriggerEvent("gb-banking:Notify", "error", "You cannot withdraw more then 10000 at an ATM!")
      else
       TriggerServerEvent("gb-banking:Withdraw", data.account, data.amount, (data.comment ~= nil and data.comment or ""))
-      aATM = false
      end
     else
       TriggerServerEvent("gb-banking:Withdraw", data.account, data.amount, (data.comment ~= nil and data.comment or ""))
-      aATM = false
     end
 end)
 
